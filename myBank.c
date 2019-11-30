@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "myBank.h"
 
-double Bank[50][2] = {{0}}; 
+double Bank[accounts][data] = {{0}}; 
 
 void O(double amount) {
     if (amount<0) {
@@ -12,7 +12,7 @@ void O(double amount) {
         if (Bank[i][0] == 0) {
             Bank[i][0] += 901+i;
             Bank[i][1] += amount;
-            printf("deposit: %0.2lf", amount);
+            printf("deposit: $%.2lf\n", amount);
             printf("your new bank account number is %.0lf, and you have $%.2lf.\n", Bank[i][0], amount);
             return;
         }

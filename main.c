@@ -2,13 +2,13 @@
 #include "myBank.h"
 
 int main() {
-    printf("                                  main menu                                  \n");
-    printf("Welcome to the Bank program, enter an operation you wish to do, or type \"H\" for the operation list\n");
     char operation;
     double account_number, amount, interest_rate;
     int temp;
+    do {
+    printf("\n\n\n                                  main menu                                  \n");
+    printf("Welcome to the Bank program, enter an operation you wish to do, or type \"H\" for the operation list\n");
     scanf(" %c", &operation);
-    while (operation != 'E') {
         switch (operation) {
         case 'O':
             printf("how much would you like to deposit?\n");
@@ -57,6 +57,9 @@ int main() {
         case 'P':
             P();
             break;
+        case 'E':
+            E();
+            break;
         case 'H':
             printf("\"O\" to open an account.\n");
             printf("\"B\" to check how much money specific account have.\n");
@@ -71,10 +74,7 @@ int main() {
         default:
             printf("no such command exist, please try again.\n");
             break;
-        }printf("                                  main menu                                  \n");
-        printf("Welcome to the Bank program, enter an operation you wish to do, or type \"H\" for the operation list\n");
-        scanf(" %c", &operation);
-    }
-    E();
+        }
+    }while (operation != 'E');
     return 0;
 }

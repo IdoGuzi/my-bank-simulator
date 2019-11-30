@@ -4,6 +4,11 @@
 #define true 1
 #define false 0
 
+#define accounts 50
+#define data 2
+
+extern double Bank[accounts][data];
+
 void O(double amount);
 
 void B(int account_number);
